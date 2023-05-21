@@ -1,0 +1,864 @@
+/* Default styles */
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cream-white: #fbfeff;
+  --dark-white: #eef0f5;
+  --blue: #233c7b;
+}
+
+li,
+.btn,
+.trial-btn,
+.toggle-bar {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(223, 223, 223);
+  border: 100vw;
+  margin-block: 0.2em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #f69c43ed;
+}
+
+/* Wrapper */
+.wrapper-container {
+  overflow-x: hidden;
+  background-color: var(--cream-white);
+  position: relative;
+}
+
+/* Header */
+.toggle-bar {
+  width: 26px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  border-radius: 100vmax;
+  background-color: var(--blue);
+  display: block;
+  margin: 50% auto;
+  position: relative;
+}
+
+.bar::before {
+  position: relative;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  border-radius: 100vmax;
+  background-color: var(--blue);
+  bottom: 8px;
+}
+
+.bar::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-radius: 100vmax;
+  background-color: var(--blue);
+  top: 6px;
+}
+
+.navbar-bottom {
+  display: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  top: 0px;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px #2f2f2f;
+  box-shadow: 0 0 10px #232323;
+  z-index: 50;
+  padding: 10px;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-btn-container {
+  display: none;
+}
+
+/* Main */
+
+/* Hero Section */
+.ineuron-logo-container img {
+  width: 140px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container input {
+  display: none;
+}
+
+.search-container img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+  padding-top: 40px;
+}
+
+/* Hard Work Section */
+.hard-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  padding: 10px;
+}
+
+.line {
+  background-color: #ea8e30;
+  width: 50px;
+  height: 4px;
+  border-radius: 100vmax;
+}
+
+.hard-work .line {
+  width: 120px;
+  position: relative;
+  bottom: 14px;
+}
+
+.section-heading {
+  color: var(--blue);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hard-work-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.company-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+ {
+  width: 150px;
+}
+
+.company-card :nth-child(2) {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.company-card :nth-child(3) {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.companies {
+  padding: 10px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  background-color: var(--dark-white);
+}
+
+.companies .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.companies .image-container img {
+  width: 170px;
+}
+
+.swiggy-logo,
+.wipro-logo,
+.amazon-logo {
+  display: none;
+}
+
+/* Hall of Fame */
+.hall-of-fame {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  padding-bottom: 100px;
+}
+
+.fame-cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.linkedin-logo {
+  width: 20px;
+  cursor: pointer;
+}
+
+.fame-card .card-image {
+  border-radius: 100vmax;
+  width: 100px;
+  height: 100px;
+}
+
+.fame-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 0 0 30px #c1c1c1;
+  box-shadow: 0 0 30px #c1c1c1;
+  border-radius: 10px;
+  gap: 20px;
+  text-align: center;
+}
+
+.fame-card-two,
+.fame-card-three {
+  display: none;
+}
+
+.arrow-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vmax;
+  -webkit-box-shadow: 0 0 8px #979797;
+  box-shadow: 0 0 8px #9e9e9e;
+  position: absolute;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.arrow-container img {
+  width: 15px;
+}
+
+.fame-cards-container .left-arrow {
+  left: -80px;
+}
+
+.fame-cards-container .right-arrow {
+  right: -80px;
+}
+
+.fame-card .name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1c1f27;
+  text-align: center;
+}
+
+.fame-card .role {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 20%);
+}
+
+.fame-card .card-text {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 44%);
+  font-weight: 500;
+}
+
+.view-more-btn {
+  background-color: inherit;
+  border: transparent;
+  outline: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* All Programs */
+.live-programs,
+.affordable-programs,
+.community-programs,
+.one-neuron,
+.test {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #262626;
+}
+
+.card-container {
+  padding-top: 40px;
+  display: flex;
+  gap: 40px;
+  position: relative !important;
+  padding-bottom: 30px;
+}
+
+.program-card {
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 0 0 30px #c1c1c1;
+  box-shadow: 0 0 30px #c1c1c1;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.program-card img {
+  width: 260px;
+}
+
+.program-card-two,
+.program-card-three {
+  display: none;
+}
+
+.program-card h4 {
+  color: #2d4581;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  height: 100px;
+}
+
+.teacher {
+  padding-bottom: 20px;
+}
+
+.card-container p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container p :nth-child(1) {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card-container p .live {
+  background-color: #a2cafa;
+  padding: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid #526d8d;
+  border-radius: 5px;
+}
+
+.card-container .left-arrow {
+  left: -50px;
+  top: 50%;
+  z-index: 10;
+}
+
+.card-container .right-arrow {
+  right: -50px;
+  top: 50%;
+  z-index: 10;
+}
+
+.affordable-programs,
+.community-programs,
+.one-neuron .card-container p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.one-neuron-text {
+  color: #979797;
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+/* Hackathons */
+.hacathon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  text-align: center;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.hacathon img {
+  width: 100%;
+}
+
+/* Hackathon Companies */
+.nvidia-logo,
+.redis-logo,
+.jetbrains-logo {
+  display: none;
+}
+
+/* Products */
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 60px;
+  flex-wrap: wrap;
+  max-width: 1440px;
+}
+
+.products .company-card :nth-child(2) {
+  font-size: 1.2rem;
+}
+
+.products .company-card :nth-child(3) {
+  font-size: 0.9rem;
+  font-weight: 400;
+  max-width: 340px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Partner */
+.partner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  gap: 80px;
+  padding-bottom: 150px;
+}
+
+.partner .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.partner-img {
+  width: 150px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--blue);
+  color: rgb(227, 227, 227);
+  padding: 30px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 25px;
+  max-width: 380px;
+  padding-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.icons {
+  width: 20px;
+  cursor: pointer;
+}
+
+.footer-details .line {
+  width: 100%;
+  height: 3px;
+}
+
+.address {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.address:hover {
+  color: white;
+}
+
+.address img {
+  width: 18px;
+}
+
+.email {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.address:hover {
+  color: white;
+}
+
+.email img {
+  width: 18px;
+}
+
+.email a {
+  color: rgb(227, 227, 227);
+}
+
+.email:hover {
+  color: white;
+}
+
+.email:hover a {
+  color: white;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+figure img {
+  width: 60px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.company-links,
+.product-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+.company-links .line {
+  width: 50%;
+  height: 2px;
+  margin-bottom: 20px;
+}
+
+.footer-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+}
+
+.product-links .line {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 20px;
+}
+
+/* Chatbot */
+.chatbot img {
+  width: 60px;
+}
+
+.chatbot {
+  position: fixed;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Tablet View */
+@media only screen and (min-width: 768px) {
+  .fame-card-two {
+    display: flex;
+  }
+  .fame-cards-container {
+    flex-direction: row;
+  }
+
+  .program-card-two {
+    display: flex;
+  }
+
+  .nvidia-logo,
+  .wipro-logo {
+    display: block;
+  }
+
+  .products .company-card :nth-child(3) {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1092px) {
+  .fame-card-three {
+    display: flex;
+  }
+
+  .hard-work-bottom {
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .amazon-logo,
+  .swiggy-logo,
+  .jetbrains-logo,
+  .redis-logo {
+    display: block;
+  }
+
+  .program-card-three {
+    display: flex;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 100px;
+  }
+
+  .footer-details {
+    max-width: 200px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Navbar */
+  .toggle-bar,
+  .toggle-bar > .bar {
+    display: none;
+  }
+
+  .header {
+    position: static;
+    box-shadow: none;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .navbar-top {
+    justify-content: space-evenly;
+    padding-top: 5px;
+  }
+
+  .search-container {
+    display: flex;
+    position: relative;
+    width: 60%;
+  }
+
+  .search-container input {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 50px;
+  }
+
+  .search-container input::placeholder {
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  .search-container img {
+    position: absolute;
+    top: 25%;
+    left: 15px;
+    width: 20px;
+  }
+
+  .nav-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .sign-up-btn {
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .sign-in-btn {
+    background-color: var(--blue);
+    padding: 6px;
+    padding-left: 26px;
+    padding-right: 26px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+
+  .navbar-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+  }
+
+  .nav-list-item {
+    color: var(--blue);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .nav-list :nth-child(1)::after,
+  .nav-list :nth-child(8)::after {
+    position: relative;
+    top: -3px;
+    right: -6px;
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid var(--blue);
+    border-top: 2px solid var(--blue);
+    margin-left: 2px;
+    transform: rotate(135deg);
+  }
+
+  .hero-image {
+    padding-top: 20px;
+  }
+}
