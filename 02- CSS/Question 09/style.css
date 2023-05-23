@@ -65,8 +65,7 @@ article {
 }
 
 .article-text {
-  max-width: 600px;
-  min-width: 100px;
+  font-size: 2rem;
 }
 
 .article-image-container {
