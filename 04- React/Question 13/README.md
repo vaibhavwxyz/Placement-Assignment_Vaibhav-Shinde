@@ -29,7 +29,7 @@
 
 **4. The calculator app will display the result of the calculation in the display area.**
 
-**5. To perform a new calculation, click the AC button or use the Escape key to clear the input.**
+**5. To perform a new calculation, click the `AC` button**
 
 ## Technologies Used
 
