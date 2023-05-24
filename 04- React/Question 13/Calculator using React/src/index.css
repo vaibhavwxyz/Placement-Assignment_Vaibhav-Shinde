@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #4ecdc4;
+  }
+  button {
+    @apply cursor-pointer text-[2rem] border-[1px] border-solid border-white outline-none bg-[rgba(255,255,255,0.75)] hover:bg-[rgba(255,255,255,0.9)] focus:bg-[rgba(255,255,255,0.9)]
+  }
+}
+
+/* @layer components {
+  .span-two {
+    grid-column: span 2;
+  }
+} */
