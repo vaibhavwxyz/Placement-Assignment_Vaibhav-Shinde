@@ -20,10 +20,10 @@
 
 **3. Use the following keys to perform actions:**
 
-- **Addition (+): Click the + button or use the `+` key.**
-- **Subtraction (-): Click the - button or use the `-` key.**
-- **Multiplication (_): Click the `x` button or use the _ key.**
-- **Division (/): Click the `/` button or use the / key.**
+- **Addition (+): Click the `+` button.**
+- **Subtraction (-): Click the `-` button.**
+- **Multiplication (\_): Click the `x` button.**
+- **Division (/): Click the `/` button.**
 - **Evaluation (=): Click the `=` button**
 - **Clear (AC): Click the `AC` button**
 
