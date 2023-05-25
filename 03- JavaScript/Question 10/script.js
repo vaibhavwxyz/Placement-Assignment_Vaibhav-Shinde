@@ -1,43 +1,45 @@
 const inputBox = document.getElementById("search");
 const container = document.querySelector(".data");
 
-const userArr = [];
+const mealArr = [];
 
 const onPageLoad = async () => {
-  const defaultApiCall = await fetch(`https://api.github.com/users`);
+  const defaultData = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=`
+  );
 
-  const ApiData = await defaultApiCall.json();
-  console.log(ApiData);
+  const jsonData = await defaultData.json();
+  console.log(jsonData);
 
-  const addDiv = ApiData.map((element) => {
+  const addDiv = jsonData.meals.map((element) => {
     const parentDiv = document.createElement("div");
     const image = document.createElement("img");
-    image.src = element.avatar_url;
-    image.classList.add("w-[200px]");
+    image.src = element.strMealThumb;
+    image.classList.add("w-[200px]", "rounded-md");
     const name = document.createElement("p");
-    name.classList.add("name");
-    name.innerText = element.login;
+    name.classList.add("text-xl");
+    name.innerText = element.strMeal;
     parentDiv.append(image, name);
     parentDiv.classList.add(
       "flex",
       "flex-col",
-      "items-center",
       "gap-2",
-      "p-4",
-      "bg-[#8d99ae]",
+      "p-2",
+      "bg-white",
       "rounded",
-      "dynamic"
+      "dynamic",
+      "shadow-md",
+      "text-black",
+      "rounded-lg",
+      "font-semibold"
     );
-    userArr.push(parentDiv);
+    mealArr.push(parentDiv);
     return parentDiv;
   });
 
   container.append(...addDiv);
 };
 onPageLoad();
-
-const dataDiv = document.querySelectorAll(".dynamic");
-const userName = document.querySelectorAll(".name");
 
 const debounce = (func, timeout) => {
   let timer;
@@ -49,15 +51,15 @@ const debounce = (func, timeout) => {
   };
 };
 
-const getUser = (query) => {
-  userArr.filter((element) => {
+const getMeal = (query) => {
+  mealArr.filter((element) => {
     element.innerText.toLowerCase().includes(query.toLowerCase())
       ? element.classList.remove("hidden")
       : element.classList.add("hidden");
   });
 };
 
-const debounceData = debounce(getUser, 500);
+const debounceData = debounce(getMeal, 500);
 
 inputBox.addEventListener("keyup", (event) => {
   debounceData(event.target.value);

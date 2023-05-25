@@ -10,16 +10,15 @@ body {
   padding: 0;
 }
 
-.wrapper-container {
-  max-width: 1400px;
+.container {
   margin: auto;
-  padding: 20px;
+  padding: 1.2rem;
 }
 
 .heading {
   margin: auto;
+  margin-bottom: 2rem;
   text-align: center;
-  padding-bottom: 30px;
 }
 
 table {
@@ -29,51 +28,43 @@ table {
 td,
 th,
 tr {
+  text-align: center;
   border: 2px solid black;
   padding: 2px;
-  text-align: center;
 }
 
-.no-border {
+.border-none {
   border: none;
 }
 
-.bg-red {
+.red-box {
   background-color: #ff9999;
 }
 
-.bg-blue {
+.blue-box {
   background-color: #99ccff;
 }
 
-.bg-yellow {
+.yellow-box {
   background-color: #fdff8c;
 }
 
-.bg-green {
+.green-box {
   background-color: #9bff99;
 }
 
-th {
-  font-weight: normal;
-}
-
-.green-row-start {
-  padding-top: 6px;
-}
-
-.group {
-  position: relative;
-}
-
-.group p {
+.group-period p {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.group-period {
+  position: relative;
+}
+
 .down-arrow {
   position: absolute;
-  left: 25px;
-  top: 33px;
+  left: 2rem;
+  top: 2rem;
 }
